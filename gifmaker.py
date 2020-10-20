@@ -33,5 +33,6 @@ os.system(
 )
 os.system(
     f"ffmpeg -v warning -ss {args.start_time} -t {args.duration} -i "
-    f"{args.input} -i {palette} -lavfi '{filters} [x]; [x][1:v] paletteuse' -y {args.output}"
+    f"{args.input} -i {palette} -lavfi '{filters} [x]; [x][1:v] paletteuse'"
+    f"-y {args.output}"
 )
